@@ -1,0 +1,10 @@
+QUESTION: 176. Second Highest Salary
+Write a SQL query to get the second highest salary from the Employee table.
+
+CODE:
+SELECT MAX(SALARY) AS SecondHighestSalary FROM EMPLOYEE WHERE SALARY<(SELECT MAX(SALARY) FROM EMPLOYEE);
+
+SUBMISSION:
+Runtime: 252 ms, faster than 51.65% of MySQL online submissions for Second Highest Salary.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Second Highest Salary.
+
