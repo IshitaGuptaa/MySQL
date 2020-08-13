@@ -7,6 +7,9 @@ Consider  and  to be two points on a 2D plane.
 Query the Manhattan Distance between points  and  and round it to a scale of  decimal places.
 
 
+MANHATTAN DISTANE = |X2-X1|+|Y2-Y1|;
+
+
 CODE:
 
 SELECT ROUND(MAX(LAT_N)-MIN(LAT_N)+MAX(LONG_W)-MIN(LONG_W),4) FROM STATION;
