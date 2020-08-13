@@ -1,0 +1,8 @@
+QUESTION: Asian Population
+Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+CODE: 
+SELECT SUM(c.POPULATION) FROM CITY c JOIN COUNTRY co ON co.CODE=c.COUNTRYCODE WHERE co.CONTINENT ='ASIA';
+
+//We could have used inner join also nut natural join is better than inner join because of reduced redundancy. We get less repitition in natural join.
