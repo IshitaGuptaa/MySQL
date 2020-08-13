@@ -1,0 +1,10 @@
+QUESTION: Average Population
+Query the average population for all cities in CITY, rounded down to the nearest integer.
+
+
+CODE: 
+SELECT ROUND(AVG(POPULATION)-0.5) FROM CITY ;
+
+--orr--
+SELECT FLOOR(AVG(POPULATION)) FROM CITY ;
+
