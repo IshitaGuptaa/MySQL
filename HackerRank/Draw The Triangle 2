@@ -1,0 +1,19 @@
+QUESTION: Draw The Triangle 2
+
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+Write a query to print the pattern P(20).
+
+
+CODE:
+
+SET @NUM=0;
+SELECT REPEAT("* ",@NUM:=@NUM+1) FROM INFORMATION_SCHEMA.TABLES LIMIT 20;
+
+
+//INFORMATION_SCHEMA IS ONE TABLE THAT IS PRESENT BY DEAFULT WHEN WE 1ST INSTALL MYSQL, SO WE KNOW ONE TABLE EXIST AND WE USE IT FOR OUR WORK.
