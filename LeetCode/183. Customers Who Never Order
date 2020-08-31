@@ -1,0 +1,64 @@
+QUESTIONS: 183. Customers Who Never Order
+Suppose that a website contains two tables, the Customers table and the Orders table. Write a SQL query to find all customers who never order anything.
+
+Table: Customers.
+
++----+-------+
+| Id | Name  |
++----+-------+
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
++----+-------+
+Table: Orders.
+
++----+------------+
+| Id | CustomerId |
++----+------------+
+| 1  | 3          |
+| 2  | 1          |
++----+------------+
+Using the above tables as example, return the following:
+
++-----------+
+| Customers |
++-----------+
+| Henry     |
+| Max       |
++-----------+
+
+
+
+
+
+
+
+
+
+CODE:
+
+Select Name as Customers from Customers where Id not in (Select CustomerId from Orders);
+
+OUTPUT-
+Success
+Runtime: 530 ms, faster than 60.94% of MySQL online submissions for Customers Who Never Order.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Customers Who Never Order.
+
+
+
+
+---OR---
+
+
+CODE:
+
+Select C.Name as "Customers" from Customers C left join Orders O on C.Id=O.CustomerId Where O.CustomerId is null;
+
+
+
+
+SUBMISSION:
+Success
+Runtime: 741 ms, faster than 36.40% of MySQL online submissions for Customers Who Never Order.
+Memory Usage: 0B, less than 100.00% of MySQL online submissions for Customers Who Never Order.
